@@ -16,14 +16,16 @@ jobs:
     job2: 
       name: "job2"
       runs-on: "windows-latest"
-      - name: "print today date"
-        run: date
+      steps:
+        - name: "print today date"
+          run: date
 
     job3:
       name: "job3"
       runs-on : "macos-latest"
-      - name: "print today date"
-        run: date
+      steps:
+        - name: "print today date"
+          run: date
 
     job4:
       name: "job4"
