@@ -1,0 +1,32 @@
+name: ch1
+
+on: 
+  push: 
+    branches: ["main"]
+
+jobs:
+    job1:
+      name: "job1"
+      runs-on: "ubuntu-latest"
+      steps:
+        - uses: actions/checkout@v3
+        - name: "print today date"
+          run: date
+
+    job2: 
+      name: "job2"
+      runs-on: "windows-latest"
+      - name: "print today date"
+        run: date
+
+    job3:
+      name: "job3"
+      runs-on : "macos-latest"
+      - name: "print today date"
+        run: date
+
+    job4:
+      name: "job4"
+      needs: [job1, job2, job3]
+      - name: "print today date"
+        run: date
