@@ -30,5 +30,6 @@ jobs:
     job4:
       name: "job4"
       needs: [job1, job2, job3]
+      steps:
       - name: "print today date"
         run: date
