@@ -30,6 +30,7 @@ jobs:
     job4:
       name: "job4"
       needs: [job1, job2, job3]
+      runs-on : "macos-latest"
       steps:
       - name: "print today date"
         run: date
